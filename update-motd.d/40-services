@@ -6,7 +6,7 @@ COLUMNS=3
 green="\e[1;32m"
 red="\e[1;31m"
 undim="\e[0m"
-services=( "nginx" "deluged" )
+services=( "nginx" "deluged" "sonarr" "radarr" "jackett" "pihole-FTL")
 # sort services
 IFS=$'\n' services=($(sort <<<"${services[*]}"))
 unset IFS
