@@ -1,4 +1,4 @@
 * Debian 10 (buster)
-* 120 GB SSD for OS
-* 500 GB HDD for everything else
-* Sonarr with Deluge as torrent backend
+* [Pi-hole](https://github.com/pi-hole/pi-hole) 
+* [Sonarr](https://github.com/Sonarr/Sonarr), [Radarr](https://github.com/Radarr/Radarr), [Lidarr](https://github.com/lidarr/Lidarr) with Deluge as torrent backend.
+* Minecraft server
