@@ -26,4 +26,6 @@ fi
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 source ~/.bash_aliases
 
+export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
