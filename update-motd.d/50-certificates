@@ -1,8 +1,5 @@
 #!/bin/bash
 
-myDir=$(dirname "$0")
-source "$myDir/config.sh"
-
 ssl_domains="gkeep.ddns.net"
 
 currentTime=$(date +%s)
