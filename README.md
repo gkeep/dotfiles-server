@@ -1,6 +1,7 @@
-![screenshot](scrot.png)
+Raspberry Pi Zero W running [Pi-hole](https://pi-hole.net/) and my [startpage](https://github.com/gkeep/dotfiles) on local network.
 
-1. Debian 10 (buster)
-2. [Pi-hole](https://github.com/pi-hole/pi-hole) 
-3. [Sonarr](https://github.com/Sonarr/Sonarr), [Radarr](https://github.com/Radarr/Radarr), [Lidarr](https://github.com/lidarr/Lidarr) with Deluge as torrent backend.
-4. Minecraft server
+![motd](scrot.png)
+
+Requirements:
+1. [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) for prettier zsh
+2. [vim-plug](https://github.com/junegunn/vim-plug) for easy vim plugins installation
