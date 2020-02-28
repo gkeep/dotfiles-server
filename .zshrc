@@ -13,4 +13,4 @@ if [[ -n $SSH_CONNECTION ]]; then
     export TERM="xterm-256color"
 fi
 
-source ~/.aliases
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
