@@ -9,3 +9,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # custom bin loacitons
 export PATH="$PATH:$HOME/.local/bin"
+
+# useful aliases
+alias temperature='sudo /opt/vc/bin/vcgencmd measure_temp'
