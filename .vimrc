@@ -4,6 +4,7 @@ syntax on
 vnoremap <C-c> "*y
 set number relativenumber
 set so=5
+set mouse=a
 let mapleader = " "
 
 " tab = 4 spaces
@@ -20,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'dense-analysis/ale'
 	Plug 'cocopon/iceberg.vim'
 	Plug 'gkeep/iceberg-dark'
+    Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " fzf
