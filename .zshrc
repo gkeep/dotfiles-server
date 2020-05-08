@@ -12,5 +12,3 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
     export TERM="xterm-256color"
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
