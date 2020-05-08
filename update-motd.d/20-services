@@ -10,12 +10,14 @@ color_success=${color_success:="38;5;10"}
 # Declare array of services and pretty human readable names
 declare -a services=(
 "pihole-FTL"
-"lighttpd"
+"wg-quick@wg0"
+"nginx"
 "unbound"
 )
 declare -a serviceName=(
 "Pi-Hole"
-"lighttpd"
+"PiVPN"
+"nginx"
 "unbound"
 )
 declare -a serviceStatus=()
@@ -27,14 +29,13 @@ do
 done
 
 # Maximum column width
-#width=$((49-2))
 width=$((34))
 
 # Current line and line length
 line=""
 lineLen=0
 
-echo -e "\e[${color_primary}mServices running\e[0m"
+echo -e "\e[${color_primary}mServices running:\e[0m"
 
 for i in ${!serviceStatus[@]}
 do
@@ -47,4 +48,4 @@ do
 done
 
 # echo what is left
-echo -e "$line\n"
+echo -e "$line"
