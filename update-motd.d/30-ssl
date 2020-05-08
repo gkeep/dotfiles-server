@@ -1,0 +1,26 @@
+#!/bin/bash
+color_primary=${color_primary:="36;1"}
+color_secondary=${color_secondary:="35"}
+color_success=${color_success:="38;5;10"}
+color_warning=${color_warning:="38;5;11"}
+
+ssl_domains=${module_ssl_domains:="gkeep.xyz"}
+
+currentTime=$(date +%s)
+output="\n\e[${color_primary}mTLS certificates:\e[0m"
+
+for domain in $ssl_domains; do
+    certTime=$(openssl s_client -servername ${domain} -connect ${domain}:443 < /dev/null 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2)
+    certLineTime=$(date -d "${certTime}" +"%a %b %d %Y")
+
+    certTimestamp=$(date -d "${certTime}" +%s)
+    if [ "${certTimestamp}" -ge "${currentTime}" ]; then
+        sign="\e[${color_success}m●\e[0m"
+    else
+        sign="\e[1;${color_warning}m▲\e[0m"
+    fi
+
+    output+="\n$sign $domain ($certLineTime)"
+done
+
+echo -e "$output\n"
